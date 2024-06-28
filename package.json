@@ -2,22 +2,6 @@
   "name": "react-demo",
   "version": "0.1.0",
   "private": true,
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/*.{js,jsx,mjs,ts,tsx}": [
-      "node_modules/.bin/prettier --write",
-      "node_modules/.bin/eslint --fix",
-      "git add"
-    ],
-    "src/*.{css,scss,less,json,html,md,markdown}": [
-      "node_modules/.bin/prettier --write",
-      "git add"
-    ]
-  },
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
@@ -83,8 +67,14 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "lint": "eslint --ext js,ts,tsx src",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "lint-staged": "lint-staged"
   },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+        "eslint --fix"
+    ]
+},
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -160,6 +150,9 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "commitlint": "^19.3.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
