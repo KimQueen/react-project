@@ -7,7 +7,6 @@ import {Button} from 'antd'
 function App() {
   return (
     <div className="App">
-      <Button type='primary'>hhh</Button>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
