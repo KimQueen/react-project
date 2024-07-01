@@ -5,9 +5,7 @@ module.exports = {
     es6: true,
   },
   // 一个配置文件可以被基础配置中的已启用的规则继承。
-  extends: [
-    'airbnb',
-  ],
+  extends: ['airbnb'],
   // 自定义全局变量
   globals: {
     Atomics: 'readonly',
@@ -15,8 +13,15 @@ module.exports = {
     _: true,
     $: true,
   },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
   // ESLint 默认使用Espree作为其解析器，你可以在配置文件中指定一个不同的解析器
-  // "parser": "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   // 配置解析器支持的语法
   parserOptions: {
     ecmaFeatures: {
@@ -48,5 +53,19 @@ module.exports = {
       },
     ],
     'no-useless-escape': 2,
+    quotes: [0, 'double'],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.tsx'] }],
+    'react/function-component-definition': 'off',
+    'object-curly-newline': 'off',
   },
 };
