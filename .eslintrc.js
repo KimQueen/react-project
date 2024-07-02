@@ -67,5 +67,6 @@ module.exports = {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.tsx'] }],
     'react/function-component-definition': 'off',
     'object-curly-newline': 'off',
+    'import/prefer-default-export': 'off',
   },
 };
