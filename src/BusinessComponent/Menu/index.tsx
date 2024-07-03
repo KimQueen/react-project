@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import { Menu } from 'antd';
+import { useNavigate } from 'react-router-dom';
 import type { MenuProps } from 'antd';
 import { menuConfig } from './config';
 import './index.scss';
 
-const page = () => {
+const MenuShow = () => {
+  const navigate = useNavigate();
   const onClick: MenuProps['onClick'] = (e) => {
-    console.log('click ', e);
+    const { key } = e;
+    const url = `/component/${key}`;
+    navigate(url);
   };
   return (
     <Menu
+      className="menuHeight"
+      theme="dark"
       onClick={onClick}
       style={{ width: 256 }}
       defaultSelectedKeys={['1']}
@@ -20,4 +26,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default MenuShow;
