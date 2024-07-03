@@ -1,5 +1,14 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "BusinessComponent/*": [
+        "./src/BusinessComponent/*"
+      ],
+      "@Component/*": [
+        "./src/Component/*"
+      ]
+    },
     "target": "es5",
     "lib": [
       "dom",

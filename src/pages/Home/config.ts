@@ -4,4 +4,10 @@ const descConfig = [
   { title: '联系我们', desc: '让你遇到问题可以通过这里联系我们，我们会尽快解决你的问题', key: 'issue' },
 ];
 
-export { descConfig };
+const urlConfig: { [key: string]: string } = {
+  start: '/component/button',
+  about: '/',
+  issue: '/',
+};
+
+export { descConfig, urlConfig };

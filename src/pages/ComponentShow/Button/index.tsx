@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import Menu from 'src/BusinessComponent/Menu';
 import './index.scss';
 
-const ButtonShow = () => {
+const MenuShow = () => {
   const [state, setState] = useState(0);
-  return <div className="">4</div>;
+  return (
+    <div className="">
+      <Menu />
+    </div>
+  );
 };
 
-export default ButtonShow;
+export default MenuShow;

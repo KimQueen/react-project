@@ -40,7 +40,6 @@ const babelRuntimeEntryHelpers = require.resolve('@babel/runtime/helpers/esm/ass
 const babelRuntimeRegenerator = require.resolve('@babel/runtime/regenerator', {
   paths: [babelRuntimeEntry],
 });
-
 // Some apps do not need the benefits of saving a web request, so not inlining the chunk
 // makes for a smoother build process.
 const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== 'false';
@@ -298,6 +297,9 @@ module.exports = function (webpackEnv) {
         ...(isEnvProductionProfile && {
           'react-dom$': 'react-dom/profiling',
           'scheduler/tracing': 'scheduler/tracing-profiling',
+          '@': path.resolve(__dirname, '../src'),
+          BusinessComponent: path.resolve(__dirname, '../src/BusinessComponent'),
+          Component: path.resolve(__dirname, '../src/Component'),
         }),
         ...(modules.webpackAliases || {}),
       },

@@ -15,6 +15,11 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
+      alias: {
+        map: [
+          ['BusinessComponent', './src/BusinessComponent'], // 别名路径
+        ],
+      },
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
@@ -53,6 +58,7 @@ module.exports = {
       },
     ],
     'no-useless-escape': 2,
+    'import/no-unresolved': [2, { ignore: ['BusinessComponent'] }],
     quotes: [0, 'double'],
     'import/extensions': [
       'error',

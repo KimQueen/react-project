@@ -1,11 +1,13 @@
 import React from 'react';
 import { Badge } from 'antd';
-import { descConfig } from './config';
+import { useNavigate } from 'react-router-dom';
+import { descConfig, urlConfig } from './config';
 import './index.scss';
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const handleRouterGo = (key: string) => {
-    console.log(key);
+    navigate(urlConfig[key]);
   };
   return (
     <div className="homePageWrapper">
