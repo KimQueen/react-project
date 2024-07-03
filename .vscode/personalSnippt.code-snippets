@@ -1,0 +1,18 @@
+{
+  "new function component": {
+    "prefix": "nfc",
+    "body": [
+      "import React, { useState } from 'react';",
+      "import './index.scss';",
+      "",
+      "const page = () => {",
+      "  const [state, setState] = useState(0);",
+      "  return <div className=\"\"></div>;",
+      "};",
+      "",
+      "export default page;",
+      "",
+    ],
+    "description": "new function component",
+  },
+}

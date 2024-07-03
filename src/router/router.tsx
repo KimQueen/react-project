@@ -1,19 +1,18 @@
 import React from 'react';
-import About from '../pages/About';
+import Button from '../pages/ComponentShow/Button';
 import Home from '../pages/Home';
-import About1 from '../pages/About1';
-import Test from '../pages/Test';
 
 const routes = [
   { path: '/', element: <Home /> },
-  { path: '/about', element: <About /> },
   {
-    path: '/test',
-    element: <Test />,
-  },
-  {
-    path: '/About1',
-    element: <About1 />,
+    path: '/component',
+    element: <Button />,
+    children: [
+      {
+        path: 'button',
+        element: <Button />,
+      },
+    ],
   },
 ];
 export default routes;
