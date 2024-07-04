@@ -1,0 +1,12 @@
+.wrap {
+  width: 100%;
+  height: 100%;
+
+  .bottom {
+    display: flex;
+
+    .content {
+      padding: 24px;
+    }
+  }
+}
