@@ -5,10 +5,11 @@ import './index.scss';
 
 interface IProps {
   children: ReactNode;
+  title: String;
 }
 
 const Layout = (props: IProps) => {
-  const { children } = props;
+  const { children, title } = props;
   return (
     <div className="wrap">
       <div className="top">
@@ -18,7 +19,10 @@ const Layout = (props: IProps) => {
         <div className="menu">
           <Menu />
         </div>
-        <div className="content">{children}</div>
+        <div className="content">
+          <div className="pageTitle">{title}</div>
+          <div>{children}</div>
+        </div>
       </div>
     </div>
   );

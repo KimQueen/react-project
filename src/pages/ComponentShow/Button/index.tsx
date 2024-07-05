@@ -6,7 +6,7 @@ const MenuShow = () => {
   const [state, setState] = useState(0);
   return (
     <div className="">
-      <Layout>uuuuuuu</Layout>
+      <Layout title="Button">uuuuuuu</Layout>
     </div>
   );
 };

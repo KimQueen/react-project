@@ -11,6 +11,10 @@ const Header = () => {
   const handleClick = (url: string) => {
     navigate(url);
   };
+
+  const gotoGitPage = () => {
+    window.open('https://github.com/KimQueen/react-project');
+  };
   return (
     <div className="warpContent-header">
       <div className="left">
@@ -24,7 +28,9 @@ const Header = () => {
             {item.name}
           </div>
         ))}
-        <img src={gitUrl} className="gitImg" alt="git" />
+        <div onClick={() => gotoGitPage()}>
+          <img src={gitUrl} className="gitImg" alt="git" />
+        </div>
       </div>
     </div>
   );
