@@ -24,7 +24,7 @@ const Header = () => {
       <div className="content" />
       <div className="right">
         {tabConfig.map((item) => (
-          <div onClick={() => handleClick(item.url)} className="tabItem">
+          <div key={item.name} onClick={() => handleClick(item.url)} className="tabItem">
             {item.name}
           </div>
         ))}

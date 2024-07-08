@@ -1,2 +1,4 @@
 /config
 *.test.tsx
+*.test.js
+*.test.ts

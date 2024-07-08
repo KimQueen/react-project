@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders Header component 1`] = `
+<DocumentFragment>
+  <div
+    class="warpContent-header"
+  >
+    <div
+      class="left"
+    >
+      <img
+        alt="图标"
+        class="imgStyle"
+        src="header.png"
+      />
+      <div
+        class="title"
+      >
+        Component
+      </div>
+    </div>
+    <div
+      class="content"
+    />
+    <div
+      class="right"
+    >
+      <div
+        class="tabItem"
+      >
+        首页
+      </div>
+      <div
+        class="tabItem"
+      >
+        关于
+      </div>
+      <div
+        class="tabItem"
+      >
+        联系我们
+      </div>
+      <div>
+        <img
+          alt="git"
+          class="gitImg"
+          src="git.jpeg"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

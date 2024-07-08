@@ -14,15 +14,12 @@ const ButtonShow = () => {
 };
 render(<ButtonShow></ButtonShow>)
 `;
-const ButtonShow = () => {
-  const [state, setState] = useState(0);
-  return (
-    <div className="">
-      <Layout title="Button">
-        <Editor code={jsxExample1} />
-      </Layout>
-    </div>
-  );
-};
+const ButtonShow = () => (
+  <div className="">
+    <Layout title="Button">
+      <Editor code={jsxExample1} />
+    </Layout>
+  </div>
+);
 
 export default ButtonShow;

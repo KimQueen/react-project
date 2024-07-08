@@ -7,7 +7,7 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
+    "@testing-library/react": "^15.0.6",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.101",
@@ -70,7 +70,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "lint": "eslint --ext js,ts,tsx src",
-    "test": "node scripts/test.js",
+    "test": "node scripts/test.js --watchAll --detectOpenHandles",
+    "coverage": "node scripts/test.js",
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
